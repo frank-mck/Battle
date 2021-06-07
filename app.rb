@@ -14,14 +14,5 @@ get '/home' do
 end
 
 get '/cat' do
-  "<div>
-  <img class = 'cat' src = 'https://i.imgur.com/jFaSxym.png'>
-  </div>
-
-  <style>
-  .cat {
-    border: 3px dashed red
-  }
-  </style>
-  "
+  erb(:index)
 end
