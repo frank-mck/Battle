@@ -12,3 +12,4 @@ gem 'capybara'
 
 gem "webrick", "~> 1.7"
 gem 'rexml'
+gem 'launchy'
