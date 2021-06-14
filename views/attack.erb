@@ -1,6 +1,9 @@
 <%# Due to switching turns in the controller i have had to reverse who is being attacked :/ %>
-<%= @game.being_attacked.name %> 
+<%= @game.current_turn.name %> 
 attacked 
-<%= @game.current_turn.name %>
+<%= @game.being_attacked.name %>
 <br>
-<a href = '/play'>OK</a>  
+
+<form action="/switch-turns" method="post">
+  <input type="submit" value="OK">
+</form>
