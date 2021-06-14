@@ -58,3 +58,20 @@ As a Player,
 So I can Lose a game of Battle,
 I want to see a 'Lose' message if I reach 0HP first
 ```
+
+## How to use
+ ```
+ git clone https://github.com/frank-mck/Battle.git
+ cd Battle
+ ruby app.rb
+ ```
+ Open in [browser](http://localhost:4567)
+ 
+ Run tests
+ ```
+ gem install rspec
+ rspec
+ ```
+ 
+ Have fun!! :) 
+ 
