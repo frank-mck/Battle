@@ -20,8 +20,12 @@ class Game
     player.receive_damage
   end
 
+  def being_attacked
+    @players.select { |player| player != @current_turn }.last
+  end
+
   def switch_turns
-    @current_turn = opponent_of(current_turn)
+    @current_turn = opponent_of(@current_turn)
   end
   
   private

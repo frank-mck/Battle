@@ -6,9 +6,14 @@ describe Game do
   let(:player_2) { double :player }
 
   describe '#attack' do
-    it 'damages the player' do
+    it 'damages player_2' do
       expect(player_2).to receive(:receive_damage)
       game.attack(player_2)
+    end
+
+    it 'damages player_1' do
+      expect(player_1).to receive(:receive_damage)
+      game.attack(player_1)
     end
   end
 
@@ -36,5 +41,4 @@ describe Game do
       expect(game.current_turn).to eq player_2
     end
   end
-
 end
