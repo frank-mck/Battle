@@ -9,6 +9,10 @@ class Battle < Sinatra::Base
     register Sinatra::Reloader
   end
 
+  before do
+    @game = Game.instance
+  end
+
   enable :sessions
 
   get '/' do
@@ -18,29 +22,25 @@ class Battle < Sinatra::Base
   post '/names' do
     @player_1 = Player.new(params[:player_1_name])
     @player_2 = Player.new(params[:player_2_name])
-    $game = Game.new(@player_1, @player_2)
+    @game = Game.create(@player_1, @player_2)
     redirect '/play'
   end
 
   get '/play' do
-    @game = $game
     erb :play
   end
 
   get '/attack' do
-     @game = $game
      erb :attack
   end
 
   get '/game-over' do
-    @game = $game
     erb :game_over
   end
 
   post '/attack' do
-    @game = $game
     @game.attack(@game.being_attacked)
-      if $game.game_over?
+      if @game.game_over?
         redirect '/game-over'
       else
         redirect '/attack'
@@ -48,7 +48,7 @@ class Battle < Sinatra::Base
   end
 
   post '/switch-turns' do
-    $game.switch_turns
+    @game.switch_turns
     redirect('/play')
   end
 
