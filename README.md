@@ -3,6 +3,8 @@
 Week 3 Makers Academy pair programming challenge. This battle app challenge covers how to create a simple web application using the GET / POST methods.
 This game lets players enter names to start the game, and attack each other until there is a winner.
 
+The app is deployed using Ruby, Sinatra, HTML, CSS. Tested using RSPEC and Capybara.
+
 ## Technical skills & Concepts
 
 - Debugging programs that use multiple languages.
