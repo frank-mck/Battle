@@ -1,4 +1,12 @@
-# battle
+# Battle
+
+## Technical skills
+
+- Debugging programs that use multiple languages.
+- Using a framework (Sinatra) in your code.
+- Structuring the code for apps that have user interaction and visual output.
+- Testing apps that have user interaction and visual output.
+- Tracing data between the browser and server.
 
 ## User stories
 
